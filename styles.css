@@ -26,7 +26,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
-    padding: 1.3em 
+    padding: 1.3em
 }
 
 #display {
@@ -60,6 +60,6 @@ body {
     background-color: #d4d4d4;
 }
 
-.color-blue{
+.color-blue {
     color: #57aefb;
 }
