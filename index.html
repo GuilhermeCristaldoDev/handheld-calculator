@@ -16,12 +16,12 @@
 <body>
     <div id="container">
         <div id="calculator-container">
-            <div id="display"><span></span></div>
+            <div id="display"><span id="displayNumbers"></span><span id="result" class="focus-result"></span></div>
             <div id="buttons-container">
-                <button class="buttons color-blue" data-type="control" data-value="clear">AC</button>
+                <button class="buttons color-blue" data-type="control" data-value="clear" id="clear">AC</button>
                 <button class="buttons color-blue" data-type="control" data-value="delete">DEL</button>
                 <button class="buttons color-blue" data-type="operator" data-value="%">%</button>
-                <button class="buttons color-blue" data-type="number" data-value="/">/</button>
+                <button class="buttons color-blue" data-type="operator" data-value="/">/</button>
                 <button class="buttons" data-type="number" data-value="7">7</button>
                 <button class="buttons" data-type="number" data-value="8">8</button>
                 <button class="buttons" data-type="number" data-value="9">9</button>
@@ -37,7 +37,7 @@
                 <button class="buttons" data-type="number" data-value="0">0</button>
                 <button class="buttons" data-type="number" data-value="00">00</button>
                 <button class="buttons" data-type="number" data-value=".">.</button>
-                <button class="buttons color-blue" data-type="equal" data-value="=">=</button>
+                <button class="buttons color-blue" data-type="equal" id="equal" data-value="=">=</button>
             </div>
         </div>
     </div>
