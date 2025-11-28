@@ -16,6 +16,7 @@ function operateNumbers(numbers) {
         case "*":
             return Number(numbers[0]) * Number(numbers[1]);
         case "/":
+            if(numbers[1] == 0) return "Error"
             return Number(numbers[0]) / Number(numbers[1]);
         case "+":
             return Number(numbers[0]) + Number(numbers[1]);
@@ -37,6 +38,7 @@ function add(item) {
     let itemValue = item.dataset.value;
 
     if (itemType !== "operator" && itemType !== "number") return
+    if(!currentDisplay && itemType === "operator") return
 
     if (itemType === "operator") {
         point = false;
@@ -114,6 +116,10 @@ buttons.addEventListener("click", (event) => {
     } else {
         if (justCalculated && item.dataset.type === "number") {
             currentDisplay = "";
+            writeOnResult(currentDisplay);
+        } else if(justCalculated && currentDisplay === "Error") {
+            clearAll();
+            writeOnScreen(currentDisplay);
             writeOnResult(currentDisplay);
         }
         if (item.dataset.value === "." && point === true) return
